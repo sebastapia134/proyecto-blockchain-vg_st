@@ -1,0 +1,272 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    
+    background-image: url(img/fondo.jpg);
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    height: 100%; /* Asegura que el fondo cubra toda la altura */
+
+    
+    filter: saturate(1.3); /* Incrementa la saturación (valores >1 aumentan la saturación) */
+    font-family: "Host Grotesk", sans-serif;
+
+  }
+
+  
+  #banner {
+    position: relative; /* Necesario para posicionar elementos absolutos dentro del banner */
+    width: 100%; /* Ocupa el ancho completo de la pantalla */
+    overflow: hidden; /* Evita desbordamientos */
+    position: sticky; /* Hace que el banner sea sticky */
+    top: 0; /* Fija el banner en la parte superior de la pantalla */
+    z-index: 1;
+  }
+  
+  #banner img {
+    width: 100%; /* Imagen del banner se ajusta al ancho del contenedor */
+    height: auto; /* Mantiene proporción */
+  }
+  
+  .profile {
+    position: absolute; /* Posiciona la foto sobre el banner */
+    top: 8%; /* Coloca la foto en la parte superior */
+    right: 1.5%; /* Espaciado proporcional desde el borde derecho */
+    width: 5%; /* Ajusta el tamaño relativo al ancho del banner */
+    aspect-ratio: 1 / 1; /* Mantiene proporción de círculo */
+    border-radius: 50%; /* Hace que sea circular */
+    overflow: hidden; /* Oculta contenido fuera del círculo */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra opcional */
+  }
+  
+  .profile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen se ajuste al círculo */
+  }
+  
+  #usuario{
+    padding-left: 4%;
+    padding-top: 40px;
+    font-size: 50px;
+    font-weight: 500;
+    padding-bottom: 20px;
+
+    /* LETRAS */
+    color: transparent;
+    background-image: url('img/fondoLetras.jpg'); /* Imagen para el fondo */
+    background-size: cover; /* Ajusta la imagen para cubrir el texto */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center; /* Centra la imagen dentro del texto */
+    background-clip: text; /* Aplica la imagen al texto */
+    -webkit-background-clip: text; /* Compatibilidad con navegadores WebKit */
+
+        /* LETRAS */
+
+
+}
+
+* {
+    box-sizing: border-box; /* Asegura que el padding y el borde se incluyan en las dimensiones del elemento */
+}
+#movimientos {
+    margin-left: 4%;
+    margin-top: 20px;
+    width: 92%; /* Ajusta el ancho al 92% para que no se salga de la pantalla */
+    overflow: hidden; /* Evita el desbordamiento si hay contenido extra */
+}
+
+#movimientos h2 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.movimiento {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 10px 0;
+    padding: 20px;
+    border-radius: 15px;
+    background-image: url(img/nubes2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    flex-wrap: wrap; /* Permite que los elementos se ajusten cuando no caben en una línea */
+}
+
+.movimiento-logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.movimiento-detalle {
+    flex-grow: 1;
+    min-width: 0; /* Evita que el contenido se desborde */
+}
+
+.movimiento-nombre {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.movimiento-fecha {
+    font-size: 28px;
+    color: #666;
+}
+
+.movimiento-monto {
+    font-size: 40px;
+    font-weight: bold;
+    min-width: 0; /* Evita que el monto se desborde */
+}
+
+@media screen and (max-width: 768px) {
+    /* Estilos para pantallas más pequeñas */
+    #movimientos {
+        margin-left: 2%; /* Reduce el margen en pantallas pequeñas */
+        width: 96%; /* Aumenta el ancho para adaptarse mejor a pantallas pequeñas */
+    }
+
+
+   
+
+    .movimiento {
+        flex-direction: column; /* Muestra los elementos de cada movimiento en una columna */
+        align-items: flex-start; /* Alinea los elementos al principio */
+        padding: 8px; /* Reduce el padding para pantallas más pequeñas */
+    }
+
+    .movimiento-logo {
+        margin-bottom: 10px; /* Agrega un margen inferior en pantallas pequeñas */
+    }
+
+    .movimiento-nombre,
+    .movimiento-fecha,
+    .movimiento-monto {
+        font-size: 20px; /* Ajusta el tamaño de la fuente para pantallas más pequeñas */
+    }}
+
+
+    #detalleMovimientos, #detalleFactura {
+        margin-left: 50px;
+        margin-right: 45px;
+        border: 1px solid black;
+        background-color: white;
+        border-radius: 10px;
+        padding: 10px;
+    }
+
+    
+    
+    .movimientoCuadro {
+        
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .icono {
+        width: 30px;
+        height: 30px;
+        background-color: #7ba3a6; /* Color de fondo del círculo */
+        border-radius: 50%;
+    }
+    
+    .info {
+        flex-grow: 1;
+        margin-left: 10px;
+    }
+    
+    .info .nombre {
+        font-weight: bold;
+        margin: 0;
+    }
+    
+    .info .cuenta {
+        margin: 0;
+        font-size: 12px;
+        color: #666;
+    }
+    
+    .monto {
+        font-weight: bold;
+        font-size: 18px;
+    }
+    #detalleFactura{
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    #contenedorBoton {
+        display: flex;
+        justify-content: center; /* Centra horizontalmente */
+        align-items: center;     /* Centra verticalmente */
+    }
+    
+    #compartir {
+        width: 500px;
+        height: 100px;
+        padding: 10px 20px;
+        font-size: 25px;
+        font-weight: 550;
+        cursor: pointer;
+        color: white;
+        border-radius: 20px;
+        border: none; /* Para eliminar el borde predeterminado */
+        background: linear-gradient(90deg, #a0f0e6, #1e99e8); /* Gradiente de color */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px; /* Espaciado entre el ícono y el texto */
+    }
+    
+    #compartir img {
+        width: 50px; /* Tamaño del icono */
+        height: 50px;
+        filter: invert();
+    }
+    
+
+    #detalleFactura{
+        margin-bottom: 40px; /* Espacio extra al final de la página */
+
+    }
+
+    footer{
+        height: 40px;
+        color: white;
+       background-color: #2f2f2f;
+            display: flex;
+            justify-content: center; /* Centra horizontalmente */
+            align-items: center;     /* Centra verticalmente */
+            position: sticky; /* Hace que el banner sea sticky */
+            bottom:  0; /* Fija el banner en la parte superior de la pantalla */
+            z-index: 1;
+    }
+
+    #contenedorBoton{
+        width: 50%;
+        margin-left: 25%;
+        margin-bottom: 20px;
+    }
+
+    .icono {
+        height: auto; 
+        display: flex; 
+        justify-content: center;
+        align-items: center;
+        overflow: hidden; 
+    }
+    
+    .icono img {
+        max-width: 100%; 
+        height: auto; 
+        object-fit: cover;
+        border-radius: 50%; 
+    }
+    

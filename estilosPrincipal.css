@@ -1,0 +1,253 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    background-image: url(img/fondo.jpg);
+    background-size: cover; /* Escala la imagen para cubrir toda el área */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    height: 100%; /* Asegura que el fondo cubra toda la altura */
+    filter: saturate(1.3); /* Incrementa la saturación (valores >1 aumentan la saturación) */
+    font-family: "Host Grotesk", sans-serif;
+
+  }
+
+  
+  #banner {
+    position: relative; /* Necesario para posicionar elementos absolutos dentro del banner */
+    width: 100%; /* Ocupa el ancho completo de la pantalla */
+    overflow: hidden; /* Evita desbordamientos */
+    position: sticky; /* Hace que el banner sea sticky */
+    top: 0; /* Fija el banner en la parte superior de la pantalla */
+    z-index: 1;
+  }
+  
+  #banner img {
+    width: 100%; /* Imagen del banner se ajusta al ancho del contenedor */
+    height: auto; /* Mantiene proporción */
+  }
+  
+  .profile {
+    position: absolute; /* Posiciona la foto sobre el banner */
+    top: 8%; /* Coloca la foto en la parte superior */
+    right: 1.5%; /* Espaciado proporcional desde el borde derecho */
+    width: 5%; /* Ajusta el tamaño relativo al ancho del banner */
+    aspect-ratio: 1 / 1; /* Mantiene proporción de círculo */
+    border-radius: 50%; /* Hace que sea circular */
+    overflow: hidden; /* Oculta contenido fuera del círculo */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra opcional */
+  }
+  
+  .profile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen se ajuste al círculo */
+  }
+  
+  #usuario{
+    padding-left: 4%;
+    padding-top: 40px;
+    font-size: 50px;
+    font-weight: 500;
+    padding-bottom: 20px;
+
+    /* LETRAS */
+    color: transparent;
+    background-image: url('img/fondoLetras.jpg'); /* Imagen para el fondo */
+    background-size: cover; /* Ajusta la imagen para cubrir el texto */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center; /* Centra la imagen dentro del texto */
+    background-clip: text; /* Aplica la imagen al texto */
+    -webkit-background-clip: text; /* Compatibilidad con navegadores WebKit */
+
+        /* LETRAS */
+
+
+}
+
+#saldoDIV {
+    margin-left: 4%;
+    position: relative;
+    width: 90%; /* Ajusta el ancho al 90% del contenedor o pantalla */
+    max-width: 750px; /* Limita el ancho máximo */
+    height: auto; /* Permite que la altura se ajuste automáticamente */
+    min-height: 300px; /* Establece una altura mínima para evitar que se colapse */
+    background-image: url(img/nubes.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    color: white;
+    overflow: hidden;
+}
+
+  
+  /* Saldo */
+  #saldoDIV p {
+    margin: 30px;
+    font-size: 30px;
+    font-weight: bold;
+    color: transparent;
+    background-image: url('img/fondoLetras.jpg'); /* Imagen para el fondo */
+    background-size: cover; /* Ajusta la imagen para cubrir el texto */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center; /* Centra la imagen dentro del texto */
+    background-clip: text; /* Aplica la imagen al texto */
+    -webkit-background-clip: text; /* Compatibilidad con navegadores WebKit */
+  }
+  
+
+  #pagarButton {
+    background-color: #000000;
+    color: gold;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-left: 50px; /* Separación del recuadro de saldo */
+    height: fit-content; /* Alinea el botón con el contenido del recuadro */
+    align-self: center;
+    
+
+  }
+
+#pagarButton:hover {
+    background-color: #242424;
+}
+
+
+  #saldo {
+    margin-left: 40px;
+    font-size: 50px;
+    font-weight: bold;
+    color: black;
+    -webkit-background-clip: text;
+    margin-top: 5px;
+    color:rgba(0, 0, 0, 0.153);
+    background-image: url('img/fondoLetras.jpg'); /* Imagen para el fondo */
+    background-position: 25%;
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-clip: text; /* Aplica la imagen al texto */
+    -webkit-background-clip: text; /* Compatibilidad con navegadores WebKit */
+  }
+  
+  /* Cuenta */
+  #cuentaDIV {
+   
+    flex-grow: 1;
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+    text-align: right;
+  }
+  
+  #cuentaDIV p {
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  #cuenta {
+    font-size: 14px;
+  }
+
+  /* Movimientos */
+  * {
+    box-sizing: border-box; /* Asegura que el padding y el borde se incluyan en las dimensiones del elemento */
+}
+
+#movimientos {
+    margin-left: 4%;
+    margin-top: 20px;
+    width: 92%; /* Ajusta el ancho al 92% para que no se salga de la pantalla */
+    overflow: hidden; /* Evita el desbordamiento si hay contenido extra */
+}
+
+#movimientos h2 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.movimiento {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 15px;
+    background-image: url(img/nubes2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    flex-wrap: wrap; /* Permite que los elementos se ajusten cuando no caben en una línea */
+}
+
+.movimiento-logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.movimiento-detalle {
+    flex-grow: 1;
+    min-width: 0; /* Evita que el contenido se desborde */
+}
+
+.movimiento-nombre {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.movimiento-fecha {
+    font-size: 14px;
+    color: #666;
+}
+
+.movimiento-monto {
+    font-size: 20px;
+    font-weight: bold;
+    min-width: 0; /* Evita que el monto se desborde */
+}
+
+@media screen and (max-width: 768px) {
+    /* Estilos para pantallas más pequeñas */
+    #movimientos {
+        margin-left: 2%; /* Reduce el margen en pantallas pequeñas */
+        width: 96%; /* Aumenta el ancho para adaptarse mejor a pantallas pequeñas */
+    }
+
+    .movimiento {
+        flex-direction: column; /* Muestra los elementos de cada movimiento en una columna */
+        align-items: flex-start; /* Alinea los elementos al principio */
+        padding: 8px; /* Reduce el padding para pantallas más pequeñas */
+    }
+
+    .movimiento-logo {
+        margin-bottom: 10px; /* Agrega un margen inferior en pantallas pequeñas */
+    }
+
+    .movimiento-nombre,
+    .movimiento-fecha,
+    .movimiento-monto {
+        font-size: 16px; /* Ajusta el tamaño de la fuente para pantallas más pequeñas */
+    }
+}
+
+
+
+footer{
+    height: 40px;
+    color: white;
+   background-color: #2f2f2f;
+        display: flex;
+        justify-content: center; /* Centra horizontalmente */
+        align-items: center;     /* Centra verticalmente */
+        position: sticky; /* Hace que el banner sea sticky */
+        bottom:  0; /* Fija el banner en la parte superior de la pantalla */
+        z-index: 1;
+}
