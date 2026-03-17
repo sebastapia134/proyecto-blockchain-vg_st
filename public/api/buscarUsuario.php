@@ -1,5 +1,5 @@
 <?php
-include '../php/db.php'; // Conexión a la base de datos
+include __DIR__ . '/../../app/php/db.php'; // Conexión a la base de datos
 
 // Leer datos del JSON recibido
 $data = json_decode(file_get_contents('php://input'), true);

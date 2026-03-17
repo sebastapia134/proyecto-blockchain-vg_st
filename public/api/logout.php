@@ -1,6 +1,5 @@
 <?php
 session_start();
 session_destroy();
-header("Location: ../paginaLogin.php");
-exit();
+header("Location: ../pages/paginaLogin.php");exit();
 ?>

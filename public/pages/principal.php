@@ -1,6 +1,6 @@
 <?php include __DIR__ . '/../../app/php/auth.php';
  
-include 'php/movimientos.php';  // Obtiene los movimientos del usuario
+include __DIR__ . '/../../app/php/movimientos.php';  // Obtiene los movimientos del usuario
 
 ?>
 

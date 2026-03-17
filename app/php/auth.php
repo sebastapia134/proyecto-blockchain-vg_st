@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!isset($_SESSION['idusuario'])) {
-    header("Location: ./paginaLogin.php");
+    include __DIR__ . '/../../app/php/db.php';
     exit();
 }
 ?>

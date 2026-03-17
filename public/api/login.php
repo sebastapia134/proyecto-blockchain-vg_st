@@ -25,8 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
 
-            header("Location: ../principal.php");
-            exit();
+            header("Location: ../pages/principal.php");            exit();
         } else {
             echo "Contraseña incorrecta.";
         }
