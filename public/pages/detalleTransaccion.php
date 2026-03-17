@@ -1,5 +1,6 @@
-<?php include 'php/auth.php'; 
-include 'php/incluirDatos.php';  // Obtiene los movimientos del usuario
+<?php include __DIR__ . '/../../app/php/auth.php';
+ 
+include __DIR__ . '/../../app/php/incluirDatos.php';  // Obtiene los movimientos del usuario
 ?>
 
 <!DOCTYPE html>
@@ -8,7 +9,7 @@ include 'php/incluirDatos.php';  // Obtiene los movimientos del usuario
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>División de Pagos</title>
-  <link rel="stylesheet" href="estilosTransaccion.css">
+  <link rel="stylesheet" href="../assets/css/estilosTransaccion.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
@@ -16,7 +17,7 @@ include 'php/incluirDatos.php';  // Obtiene los movimientos del usuario
 <body>
   <!-- Contenedor Principal -->
   <div id="banner" class="banner">
-    <img src="img/banner.jpg" alt="Banner" class="banner-img">
+    <img src="../assets/img/ui/banner.jpg" alt="Banner" class="banner-img">
     <div class="profile" id="profile">
       <img src="<?php echo htmlspecialchars($_SESSION['url_foto'])?>" alt="Foto de perfil" id="profile-img">
     </div>
@@ -175,7 +176,7 @@ botonAgregarUsuario.addEventListener('click', () => {
     }
 
     // Hacer consulta a la base de datos
-    fetch('php/buscarUsuario.php', {
+    fetch('../api/buscarUsuario.php', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ email })

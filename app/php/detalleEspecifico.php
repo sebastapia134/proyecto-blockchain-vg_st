@@ -1,5 +1,5 @@
 <?php
-include 'db.php';  // Incluir la conexión a la base de datos
+include __DIR__ . '/../../app/php/db.php';  // Incluir la conexión a la base de datos
 
 // Obtener el id de la transacción desde la URL
 $idTransaccion = isset($_GET['id']) ? intval($_GET['id']) : 0;

@@ -1,6 +1,6 @@
 <?php
 // Incluir la conexión a la base de datos
-include 'db.php';
+include __DIR__ . '/../../app/php/db.php';
 
 // Obtener el idlocal desde la URL
 $idlocal = isset($_GET['idlocal']) ? (int)$_GET['idlocal'] : 0;

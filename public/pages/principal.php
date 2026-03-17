@@ -1,4 +1,5 @@
-<?php include 'php/auth.php'; 
+<?php include __DIR__ . '/../../app/php/auth.php';
+ 
 include 'php/movimientos.php';  // Obtiene los movimientos del usuario
 
 ?>
@@ -9,12 +10,12 @@ include 'php/movimientos.php';  // Obtiene los movimientos del usuario
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pagina Principal</title>
-    <link rel="stylesheet" href="estilosPrincipal.css">
+    <link rel="stylesheet" href="../assets/css/estilosPrincipal.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
-    <script src="js/wallet.js" defer></script>
+    <script src="../assets/js/wallet.js" defer></script>
     
 
 
@@ -66,7 +67,7 @@ include 'php/movimientos.php';  // Obtiene los movimientos del usuario
 
 
     <div id="banner" class="banner">
-        <img src="img/banner.jpg" alt="Banner" id="banner-img">
+        <img src="../assets/img/ui/banner.jpg" alt="Banner" id="banner-img">
         <div class="profile" id="profile">
             <a href="perfilUsuario.php">
             <img src="<?php echo htmlspecialchars($_SESSION['url_foto'])?>" alt="Foto de perfil" id="profile-img">
@@ -128,7 +129,7 @@ include 'php/movimientos.php';  // Obtiene los movimientos del usuario
 
                 <img src="<?php echo $logoLocal; ?>" alt="Logo <?php echo $nombreLocal; ?>" class="movimiento-logo" id="movimiento-logo-<?php echo $counter; ?> href='google.com'">
                 <div class="movimiento-detalle" id="movimiento-detalle-<?php echo $counter; ?>">
-                <a href="<?php echo 'http://localhost/blockchain/detalleMovimiento.php?id=' .  $idtransaccion; ?>" target="_blank">
+                <a href="<?php echo 'detalleMovimiento.php?id=' . $idtransaccion; ?>" target="_blank">
 
                     <div class="movimiento-nombre" id="movimiento-nombre-<?php echo $counter; ?>"><?php echo $nombreLocal; ?></div> </a>
                     <div class="movimiento-fecha" id="movimiento-fecha-<?php echo $counter; ?>"><?php echo $fecha; ?></div>

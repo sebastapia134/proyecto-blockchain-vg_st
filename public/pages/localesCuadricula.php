@@ -1,5 +1,6 @@
-<?php include 'php/auth.php'; 
-include 'php/movimientos.php';
+<?php include __DIR__ . '/../../app/php/auth.php';
+ 
+include __DIR__ . '/../../app/php/movimientos.php';
 ?>
 
 <!DOCTYPE html>
@@ -12,8 +13,8 @@ include 'php/movimientos.php';
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
-    <script src="js/wallet.js" defer></script>  
-  <link rel="stylesheet" href="estilosCuadricula.css">
+    <script src="../assets/js/wallet.js" defer></script>  
+  <link rel="stylesheet" href="../assets/css/estilosCuadricula.css">
 </head>
 <body>
 
@@ -108,7 +109,7 @@ include 'php/movimientos.php';
 
 
 <div id="banner" class="banner">
-        <img src="img/banner.jpg" alt="Banner" id="banner-img">
+        <img src="../assets/img/ui/banner.jpg" alt="Banner" id="banner-img">
         <div class="profile" id="profile">
             <a href="perfilUsuario.php">
             <img src="<?php echo htmlspecialchars($_SESSION['url_foto'])?>" alt="Foto de perfil" id="profile-img">
@@ -136,7 +137,7 @@ include 'php/movimientos.php';
 
 
   <!-- Script -->
-  <script src="js/locales.js"></script>
+  <script src="../assets/js/locales.js"></script>
   <footer id="footer" class="footer">Todos los derechos reservados</footer>
 
 </body>

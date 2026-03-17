@@ -1,4 +1,5 @@
-<?php include 'php/auth.php'; ?>
+<?php include __DIR__ . '/../../app/php/auth.php';
+ ?>
 
 <!DOCTYPE html>
 <html lang="es">
@@ -6,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil de Usuario</title>
-    <link rel="stylesheet" href="estilosPerfilUsuario.css">
+    <link rel="stylesheet" href="../assets/css/estilosPerfilUsuario.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
@@ -45,7 +46,7 @@
    
 
   <div id="contenedorBoton" class="contenedor-boton">
-    <a href="php/logout.php" id="salir" class="salir-btn">
+    <a href="../api/logout.php" id="salir" class="salir-btn">
         <span id="salir-text">Cerrar Sesión</span>
     </a>
 </div>

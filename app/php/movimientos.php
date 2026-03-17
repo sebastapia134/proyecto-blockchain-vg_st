@@ -1,6 +1,6 @@
 <?php
 // Incluir la conexión a la base de datos
-include 'db.php'; 
+include __DIR__ . '/../../app/php/db.php'; 
 
 // Obtener el ID del usuario logueado desde la sesión
 $idusuario = $_SESSION['idusuario'];

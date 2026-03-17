@@ -1,13 +1,12 @@
-<?php include 'php/detalleEspecifico.php'; 
-include 'php/auth.php'?>
-
+<?php include __DIR__ . '/../../app/php/detalleEspecifico.php'; 
+include __DIR__ . '/../../app/php/auth.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detalle Movimiento</title>
-    <link rel="stylesheet" href="estilosDetalleMovimiento.css">
+    <link rel="stylesheet" href="../assets/css/estilosDetalleMovimiento.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
@@ -17,7 +16,7 @@ include 'php/auth.php'?>
 
     <!-- Banner -->
     <div id="banner" class="banner">
-        <img src="img/banner.jpg" alt="Banner" id="banner-img">
+        <img src="../assets/img/ui/banner.jpg" alt="Banner" id="banner-img">
         <div class="profile" id="profile">
             <a href="perfilUsuario.php">
             <img src="<?php echo htmlspecialchars($_SESSION['url_foto'])?>" alt="Foto de perfil" id="profile-img">

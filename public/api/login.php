@@ -1,6 +1,6 @@
 <?php
 session_start(); 
-include 'db.php'; 
+include __DIR__ . '/../../app/php/db.php'; 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $mail = $_POST['mail'];

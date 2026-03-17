@@ -1,6 +1,6 @@
 <?php
 // Incluir la conexión a la base de datos
-include 'db.php';
+include __DIR__ . '/../../app/php/db.php';
 
 // Consultar los locales, incluyendo el atributo direccionLocal_codigoQR
 $query = $conn->prepare("
